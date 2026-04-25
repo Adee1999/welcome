@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бекзат & Аяулым - Үйлену тойы</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="music-player" onclick="toggleMusic()">
+        <div id="music-icon">🎵</div>
+        <audio id="bgMusic" loop>
+            <source src="Albina-Shardarova-Zhuregimnin-iesi-agugai.kz_.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div id="flower-container"></div>
+
+    <div class="wrapper">
+        <section class="hero reveal">
+            <img src="41.png" alt="Жас жұбайлар">
+        </section>
+
+        <section class="content reveal">
+            <p class="intro">ҚҰРМЕТТІ АҒАЙЫН-ТУЫС, ҚҰДА-ЖЕКЖАТ, ДОС-ЖАРАНДАР!</p>
+            <p>СІЗДЕРДІ БАЛАЛАРЫМЫЗ</p>
+            <h1 class="names">Бекзат & Аяулымның</h1>
+            <p>ШАҢЫРАҚ КӨТЕРУ ТОЙЫНА АРНАЛҒАН САЛТАНАТТЫ АҚ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ</p>
+        </section>
+
+        <section class="details reveal">
+           
+            
+            <div class="info-block">
+                <p class="script-text">11.11.2026 жыл</p>
+                <p class="script-text">сағат 18:00</p>
+                
+                <div class="address">
+                    <p>МАҚТАРАЛ АУДАНЫ</p>
+                    <p>МЫРЗАКЕНТ КЕНТІ</p>
+                    <h2 class="hall-name">"Grand Gulsara"</h2>
+                    <p>мейрамханасы</p>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#" class="icon-link insta"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="icon-link maps"><i class="fas fa-location-dot"></i></a>
+                </div>
+
+                <div class="hosts">
+                    <p>ТОЙ ИЕЛЕРІ:</p>
+                    <p class="script-text">Нұрдәулет - Ләззат</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="program reveal">
+            <h3>ТОЙ БАҒДАРЛАМАСЫ:</h3>
+            <div class="program-list">
+                <div class="program-item">
+                    <i class="fas fa-map-pin"></i>
+                    <p class="program-script">Қонақтарды отырғызу</p>
+                </div>
+                <div class="program-item">
+                    <i class="fas fa-archway"></i>
+                    <p class="program-script">Жас-жұбайларды қарсы алу</p>
+                </div>
+                <div class="program-item">
+                    <i class="fas fa-music"></i>
+                    <p class="program-script">Ән шашу</p>
+                </div>
+                <div class="program-item">
+                    <i class="fas fa-cake-candles"></i>
+                    <p class="program-script">Ойындар</p>
+                </div>
+                <div class="program-item">
+                    <i class="fas fa-users-viewfinder"></i>
+                    <p class="program-script">Шоу программа</p>
+                </div>
+                <div class="program-item">
+                    <i class="fas fa-clinking-glasses"></i>
+                    <p class="program-script">Музыкалық би</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="timer-section reveal">
+            <h3>ТОЙДЫҢ БАСТАЛУЫНА:</h3>
+            <div id="timer">
+                <div class="t-item"><span id="days">00</span><p>күн</p></div>
+                <div class="t-item"><span id="hours">00</span><p>сағат</p></div>
+                <div class="t-item"><span id="minutes">00</span><p>минут</p></div>
+                <div class="t-item"><span id="seconds">00</span><p>сек</p></div>
+            </div>
+        </section>
+
+        <section class="rsvp reveal">
+    <h3 class="h3">ТОЙҒА КЕЛЕСІЗ БЕ?</h3>
+    <form> <input type="text" placeholder="Номеріңізді енгізіңіз! Мысалы: 77071234567" required>
+        <div class="radio-group">
+            <label><input type="radio" name="r" value="1" required> КЕЛЕМІН, БҰЙЫРСА</label>
+            <label><input type="radio" name="r" value="2"> ЖҰБАЙЫММЕН БАРАМЫН</label>
+            <label><input type="radio" name="r" value="3"> ӨКІНІШКЕ ОРАЙ, КЕЛЕ АЛМАЙМЫН</label>
+        </div>
+        <button type="submit" class="submit-btn">Жауапты жіберу</button>
+    </form>
+</section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
