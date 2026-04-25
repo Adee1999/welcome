@@ -1,17 +1,22 @@
-// 1. Таймерді 05.06.2026, 19:00-ге орнату
+// 1. Таймер: Бүгіннен 05.06.2026, 19:00-ге дейін
 const weddingDate = new Date("Jun 05, 2026 19:00:00").getTime();
 
 function updateTimer() {
     const now = new Date().getTime();
     const diff = weddingDate - now;
+
     if (diff > 0) {
         document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
         document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
+    } else {
+        // Уақыт өтіп кетсе 00 қылып қою
+        document.getElementById("timer").innerHTML = "ТОЙ БАСТАЛДЫ!";
     }
 }
 setInterval(updateTimer, 1000);
+updateTimer(); // Бет жүктелгенде бірден іске қосу
 
 // 2. WhatsApp-қа жіберу логикасы
 function sendToWhatsApp(e) {
@@ -75,24 +80,23 @@ function autoPlayMusic() {
 window.addEventListener('click', autoPlayMusic);
 window.addEventListener('scroll', autoPlayMusic);
 
-// 2. Скролл эффектісі
+// 2. Скролл эффектісі (тек reveal класы барларға)
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
     reveals.forEach(el => {
         let windowHeight = window.innerHeight;
         let elementTop = el.getBoundingClientRect().top;
-        let elementVisible = 100; // Элемент көрінуі үшін қажетті арақашықтық
+        let revealPoint = 100; // 100px көрінгенде эффект қосылады
 
-        if (elementTop < windowHeight - elementVisible) {
+        if (elementTop < windowHeight - revealPoint) {
             el.classList.add("active");
         }
     });
 }
-
 window.addEventListener("scroll", reveal);
 
 // Сайт ашылғанда бір рет тексеру (жоғарғы бөлімдер үшін)
-window.onload = reveal;
+//window.onload = reveal;
 
 function createPetal() {
     const petal = document.createElement("div");
