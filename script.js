@@ -1,5 +1,5 @@
-// 1. Таймер (2026 жылға қойылған)
-const weddingDate = new Date("Nov 11, 2026 18:00:00").getTime();
+// 1. Таймерді 05.06.2026, 19:00-ге орнату
+const weddingDate = new Date("Jun 05, 2026 19:00:00").getTime();
 
 function updateTimer() {
     const now = new Date().getTime();
@@ -75,16 +75,24 @@ function autoPlayMusic() {
 window.addEventListener('click', autoPlayMusic);
 window.addEventListener('scroll', autoPlayMusic);
 
-// 4. Скролл анимациясы мен гүлдер (Бұрынғы код)
+// 2. Скролл эффектісі
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
     reveals.forEach(el => {
         let windowHeight = window.innerHeight;
         let elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) el.classList.add("active");
+        let elementVisible = 100; // Элемент көрінуі үшін қажетті арақашықтық
+
+        if (elementTop < windowHeight - elementVisible) {
+            el.classList.add("active");
+        }
     });
 }
+
 window.addEventListener("scroll", reveal);
+
+// Сайт ашылғанда бір рет тексеру (жоғарғы бөлімдер үшін)
+window.onload = reveal;
 
 function createPetal() {
     const petal = document.createElement("div");
