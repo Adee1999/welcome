@@ -15,9 +15,24 @@ body {
     text-align: center;
 }
 
-.reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
-.reveal.active { opacity: 1; transform: translateY(0); }
+/* Бастапқыда көрінбей тұрады */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1.5s all ease; /* 1.5 секунд бойы баяу көрінеді */
+}
 
+/* Скролл жасағанда қосылатын класс */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Бірінші бөлімдер үшін эффект қажет емес */
+.hero, .content {
+    opacity: 1;
+    transform: none;
+}
 .hero img { width: 100%; display: block; }
 
 .names {
